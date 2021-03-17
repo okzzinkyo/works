@@ -116,7 +116,7 @@
             <h2 class="fs-h2 fw-regular ff-title animate__animated">
               WHAT WE DO
             </h2>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-01.svg"
                 alt="ADVERTISING"
@@ -127,7 +127,7 @@
                 vulputate vestibulum, ligula urna auctor quam.
               </p>
             </div>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-02.svg"
                 alt="CREATIVE"
@@ -138,7 +138,7 @@
                 vulputate vestibulum, ligula urna auctor quam.
               </p>
             </div>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-03.svg"
                 alt="BRANDING"
@@ -149,7 +149,7 @@
                 vulputate vestibulum, ligula urna auctor quam.
               </p>
             </div>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-04.svg"
                 alt="RESEARCH"
@@ -160,7 +160,7 @@
                 vulputate vestibulum, ligula urna auctor quam.
               </p>
             </div>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-05.svg"
                 alt="STRATEGY"
@@ -171,7 +171,7 @@
                 vulputate vestibulum, ligula urna auctor quam.
               </p>
             </div>
-            <div class="doing-item">
+            <div class="doing-item hide">
               <img
                 src="../assets/01_tersus01/services-icn-06.svg"
                 alt="CONSULTING"
@@ -451,7 +451,7 @@
     </div>
     <script>
       $(window).ready(function () {
-        $(".doing-item").hide();
+
         // nav background 적용
         if ($(window).scrollTop() != 0) {
           $(".nav-bg").show();
@@ -486,12 +486,9 @@
         ) {
           // show animation add
           $("#AboutUs h2").show();
-          $("#AboutUs h2").addClass("animate__fadeInLeft");
+          $("#AboutUs h2").css("animation-name","fadeInLeft");
           $("#AboutUs p").show();
-          $("#AboutUs p").addClass("animate__fadeInRight");
-          // hide animation remove
-          $("#AboutUs h2").removeClass("animate__fadeOutLeft");
-          $("#AboutUs p").removeClass("animate__fadeOutRight");
+          $("#AboutUs p").css("animation-name"," fadeInRight");
 
           $("#AboutUs").addClass("section01-show");
           console.log("Section01 title show");
@@ -500,11 +497,8 @@
           $("#AboutUs").hasClass("section01-show") == true
         ) {
           // hide animation add
-          $("#AboutUs h2").addClass("animate__fadeOutLeft");
-          $("#AboutUs p").addClass("animate__fadeOutRight");
-          // show animation remove
-          $("#AboutUs h2").removeClass("animate__fadeInLeft");
-          $("#AboutUs p").removeClass("animate__fadeInRight");
+          $("#AboutUs h2").css("animation-name","fadeOutLeft");
+          $("#AboutUs p").css("animation-name","fadeOutRight");
 
           $("#AboutUs").removeClass("section01-show");
           console.log("Section01 title hide");
@@ -521,17 +515,12 @@
         ) {
           // show animation add
           $("#WhatWeDo h2").show();
-          $("#WhatWeDo h2").addClass("animate__fadeInLeft");
-          // hide animation remove
-          $("#WhatWeDo h2").removeClass("animate__fadeOutLeft");
+          $("#WhatWeDo h2").css("animation-name","fadeInLeft");
           console.log("section2 title show");
 
           // item show animation add
-          $(".doing-item").show();
           $(".doing-item").addClass("flex");
-          $(".doing-item").addClass("animate__fadeInUp");
-          // item hide animation remove
-          $(".doing-item").removeClass("animate__fadeOutDown");
+          $(".doing-item").css("animation-name","fadeInUP");
 
           $("#WhatWeDo").addClass("section02-show");
           console.log("section2 item show");
@@ -540,19 +529,18 @@
           $("#WhatWeDo").hasClass("section02-show") == true
         ) {
           // hide animation add
-          $("#WhatWeDo h2").addClass("animate__fadeOutLeft");
-          // show animation remove
-          $(".doing-item").removeClass("flex");
-          $("#WhatWeDo h2").removeClass("animate__fadeInLeft");
-          console.log("section2 title hide n");
+          $("#WhatWeDo h2").css("animation-name","fadeOutLeft");
+          console.log("section2 title hide");
 
-          //// item hide animation add
-          $(".doing-item").fadeOut();
-          //// item show animation remove
-          $(".doing-item").removeClass("animate__fadeInUp");
+          // //// item hide animation add
+          $(".doing-item").css("animation-name","fadeOutDown");
+          setTimeout(function(){
+            $(".doing-item").removeClass("flex");
+          }, 500);
+
 
           $("#WhatWeDo").removeClass("section02-show");
-          console.log("section2 item show");
+          console.log("section2 item hide");
         }
       });
 

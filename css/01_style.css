@@ -276,6 +276,7 @@ fieldset {
 }
 
 #WhatWeDo h2 {
+  display: none;
   margin: 0 auto;
   width: 1280px;
   height: 80px;
@@ -283,7 +284,7 @@ fieldset {
 }
 
 .doing-item {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -296,6 +297,10 @@ fieldset {
   margin-bottom: 50px;
   transition: border-radius 0.4s ease-out;
   animation-duration: 1s;
+}
+
+.doing-item.flex{
+  display: flex;
 }
 
 .doing-item:hover {
@@ -738,4 +743,75 @@ fieldset {
 .label {
   display: block;
   color: red;
+}
+
+
+/* Animation 정의 */
+/* fade In */
+@keyframes fadeInRight{
+  from{
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft{
+  from{
+    transform: translateX(-1500px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUP{
+  from{
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* fade Out */
+
+@keyframes fadeOutRight{
+  from{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to{
+    transform:  translateX(1500px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutLeft{
+  from{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to{
+    transform:  translateX(-1500px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutDown{
+  from{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(1000px);
+    opacity: 0;
+  }
 }
