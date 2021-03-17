@@ -116,71 +116,77 @@
             <h2 class="fs-h2 fw-regular ff-title animate__animated">
               WHAT WE DO
             </h2>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-01.svg"
-                alt="ADVERTISING"
-              />
-              <h3 class="fs-base fw-medium">ADVERTISING</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
+            <div id="doing-items01">
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-01.svg"
+                  alt="ADVERTISING"
+                />
+                <h3 class="fs-base fw-medium">ADVERTISING</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-04.svg"
+                  alt="RESEARCH"
+                />
+                <h3 class="fs-base fw-medium">RESEARCH</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
             </div>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-02.svg"
-                alt="CREATIVE"
-              />
-              <h3 class="fs-base fw-medium">CREATIVE</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
+            <div id="doing-items02">
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-02.svg"
+                  alt="CREATIVE"
+                />
+                <h3 class="fs-base fw-medium">CREATIVE</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-05.svg"
+                  alt="STRATEGY"
+                />
+                <h3 class="fs-base fw-medium">STRATEGY</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
             </div>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-03.svg"
-                alt="BRANDING"
-              />
-              <h3 class="fs-base fw-medium">BRANDING</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
-            </div>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-04.svg"
-                alt="RESEARCH"
-              />
-              <h3 class="fs-base fw-medium">RESEARCH</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
-            </div>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-05.svg"
-                alt="STRATEGY"
-              />
-              <h3 class="fs-base fw-medium">STRATEGY</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
-            </div>
-            <div class="doing-item hide">
-              <img
-                src="../assets/01_tersus01/services-icn-06.svg"
-                alt="CONSULTING"
-              />
-              <h3 class="fs-base fw-medium">CONSULTING</h3>
-              <p class="fs-base ff-desciption">
-                Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                vulputate vestibulum, ligula urna auctor quam.
-              </p>
+            <div id="doing-items03">
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-03.svg"
+                  alt="BRANDING"
+                />
+                <h3 class="fs-base fw-medium">BRANDING</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
+              <div class="doing-item">
+                <img
+                  src="../assets/01_tersus01/services-icn-06.svg"
+                  alt="CONSULTING"
+                />
+                <h3 class="fs-base fw-medium">CONSULTING</h3>
+                <p class="fs-base ff-desciption">
+                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                  vulputate vestibulum, ligula urna auctor quam.
+                </p>
+              </div>
             </div>
           </section>
         </div>
@@ -520,7 +526,10 @@
 
           // item show animation add
           $(".doing-item").addClass("flex");
-          $(".doing-item").css("animation-name","fadeInUP");
+          $("#doing-items01").css("animation-name","fadeInUP");
+          $("#doing-items02").css("animation-name","fadeInUP");
+          $("#doing-items03").css("animation-name","fadeInUP");
+
 
           $("#WhatWeDo").addClass("section02-show");
           console.log("section2 item show");
@@ -533,7 +542,10 @@
           console.log("section2 title hide");
 
           // //// item hide animation add
-          $(".doing-item").css("animation-name","fadeOutDown");
+          $("#doing-items01").css("animation-name","fadeOutDown");
+          $("#doing-items02").css("animation-name","fadeOutDown");
+          $("#doing-items03").css("animation-name","fadeOutDown");
+          // $(".doing-item").css("animation-name","fadeOutDown");
           setTimeout(function(){
             $(".doing-item").removeClass("flex");
           }, 500);

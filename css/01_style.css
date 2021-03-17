@@ -283,6 +283,28 @@ fieldset {
   margin-bottom: 60px;
 }
 
+#doing-items01{
+  width: 300px;
+  height: 520px;
+  margin-right: 100px;
+  animation-duration: 1s;
+}
+
+#doing-items02{
+  width: 300px;
+  height: 520px;
+  margin-right: 100px;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+#doing-items03{
+  width: 300px;
+  height: 520px;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
 .doing-item {
   display: none;
   flex-direction: column;
@@ -293,10 +315,8 @@ fieldset {
   padding: 10px;
   text-align: center;
   border: 1px rgba(225, 225, 225, 0.5) solid;
-  margin-right: 100px;
   margin-bottom: 50px;
   transition: border-radius 0.4s ease-out;
-  animation-duration: 1s;
 }
 
 .doing-item.flex{
