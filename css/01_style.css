@@ -283,14 +283,14 @@ fieldset {
   margin-bottom: 60px;
 }
 
-#doing-items01{
+#doing-items01 {
   width: 300px;
   height: 520px;
   margin-right: 100px;
   animation-duration: 1s;
 }
 
-#doing-items02{
+#doing-items02 {
   width: 300px;
   height: 520px;
   margin-right: 100px;
@@ -298,7 +298,7 @@ fieldset {
   animation-delay: 0.5s;
 }
 
-#doing-items03{
+#doing-items03 {
   width: 300px;
   height: 520px;
   animation-duration: 1s;
@@ -319,7 +319,7 @@ fieldset {
   transition: border-radius 0.4s ease-out;
 }
 
-.doing-item.flex{
+.doing-item.flex {
   display: flex;
 }
 
@@ -471,7 +471,7 @@ fieldset {
 }
 
 .member-name::after {
-  content: "";
+  content: '';
   display: block;
   background-color: #ffffff;
   width: 50px;
@@ -576,7 +576,7 @@ fieldset {
 #userEMAIL::placeholder,
 #userTEXT::placeholder {
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #userTEXT {
@@ -765,37 +765,36 @@ fieldset {
   color: red;
 }
 
-
 /* Animation 정의 */
 /* fade In */
-@keyframes fadeInRight{
-  from{
+@keyframes fadeInRight {
+  from {
     transform: translateX(1500px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-@keyframes fadeInLeft{
-  from{
+@keyframes fadeInLeft {
+  from {
     transform: translateX(-1500px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-@keyframes fadeInUP{
-  from{
+@keyframes fadeInUP {
+  from {
     transform: translateY(1000px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateY(0);
     opacity: 1;
   }
@@ -803,34 +802,34 @@ fieldset {
 
 /* fade Out */
 
-@keyframes fadeOutRight{
-  from{
+@keyframes fadeOutRight {
+  from {
     transform: translateX(0);
     opacity: 1;
   }
-  to{
-    transform:  translateX(1500px);
+  to {
+    transform: translateX(1500px);
     opacity: 0;
   }
 }
 
-@keyframes fadeOutLeft{
-  from{
+@keyframes fadeOutLeft {
+  from {
     transform: translateX(0);
     opacity: 1;
   }
-  to{
-    transform:  translateX(-1500px);
+  to {
+    transform: translateX(-1500px);
     opacity: 0;
   }
 }
 
-@keyframes fadeOutDown{
-  from{
+@keyframes fadeOutDown {
+  from {
     transform: translateY(0);
     opacity: 1;
   }
-  to{
+  to {
     transform: translateY(1000px);
     opacity: 0;
   }
