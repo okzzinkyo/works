@@ -116,76 +116,78 @@
             <h2 class="fs-h2 fw-regular ff-title animate__animated">
               WHAT WE DO
             </h2>
-            <div id="doing-items01">
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-01.svg"
-                  alt="ADVERTISING"
-                />
-                <h3 class="fs-base fw-medium">ADVERTISING</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
+            <div class="doing-items-wrap">
+              <div id="doing-items01">
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-01.svg"
+                    alt="ADVERTISING"
+                  />
+                  <h3 class="fs-base fw-medium">ADVERTISING</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-04.svg"
+                    alt="RESEARCH"
+                  />
+                  <h3 class="fs-base fw-medium">RESEARCH</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
               </div>
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-04.svg"
-                  alt="RESEARCH"
-                />
-                <h3 class="fs-base fw-medium">RESEARCH</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
+              <div id="doing-items02">
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-02.svg"
+                    alt="CREATIVE"
+                  />
+                  <h3 class="fs-base fw-medium">CREATIVE</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-05.svg"
+                    alt="STRATEGY"
+                  />
+                  <h3 class="fs-base fw-medium">STRATEGY</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div id="doing-items02">
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-02.svg"
-                  alt="CREATIVE"
-                />
-                <h3 class="fs-base fw-medium">CREATIVE</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
-              </div>
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-05.svg"
-                  alt="STRATEGY"
-                />
-                <h3 class="fs-base fw-medium">STRATEGY</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
-              </div>
-            </div>
-            <div id="doing-items03">
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-03.svg"
-                  alt="BRANDING"
-                />
-                <h3 class="fs-base fw-medium">BRANDING</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
-              </div>
-              <div class="doing-item">
-                <img
-                  src="../assets/01_tersus01/services-icn-06.svg"
-                  alt="CONSULTING"
-                />
-                <h3 class="fs-base fw-medium">CONSULTING</h3>
-                <p class="fs-base ff-desciption">
-                  Vestibulum vitae euismod felis. Morbi tincidunt, purus id
-                  vulputate vestibulum, ligula urna auctor quam.
-                </p>
+              <div id="doing-items03">
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-03.svg"
+                    alt="BRANDING"
+                  />
+                  <h3 class="fs-base fw-medium">BRANDING</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
+                <div class="doing-item">
+                  <img
+                    src="../assets/01_tersus01/services-icn-06.svg"
+                    alt="CONSULTING"
+                  />
+                  <h3 class="fs-base fw-medium">CONSULTING</h3>
+                  <p class="fs-base ff-desciption">
+                    Vestibulum vitae euismod felis. Morbi tincidunt, purus id
+                    vulputate vestibulum, ligula urna auctor quam.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -524,10 +526,16 @@
           console.log('section2 title show');
 
           // item show animation add
-          $('.doing-item').addClass('flex');
+          $('#doing-items01').show();
           $('#doing-items01').css('animation-name', 'fadeInUP');
-          $('#doing-items02').css('animation-name', 'fadeInUP');
-          $('#doing-items03').css('animation-name', 'fadeInUP');
+          setTimeout(function () {
+            $('#doing-items02').show();
+            $('#doing-items02').css('animation-name', 'fadeInUP');
+          }, 300);
+          setTimeout(function () {
+            $('#doing-items03').show();
+            $('#doing-items03').css('animation-name', 'fadeInUP');
+          }, 500);
 
           $('#WhatWeDo').addClass('section02-show');
           console.log('section2 item show');
@@ -539,14 +547,19 @@
           $('#WhatWeDo h2').css('animation-name', 'fadeOutLeft');
           console.log('section2 title hide');
 
-          // //// item hide animation add
-          $('#doing-items01').css('animation-name', 'fadeOutDown');
-          $('#doing-items02').css('animation-name', 'fadeOutDown');
+          // item hide animation add
           $('#doing-items03').css('animation-name', 'fadeOutDown');
-          // $(".doing-item").css("animation-name","fadeOutDown");
           setTimeout(function () {
-            $('.doing-item').removeClass('flex');
+            $('#doing-items03').hide();
+            $('#doing-items02').css('animation-name', 'fadeOutDown');
+          }, 300);
+          setTimeout(function () {
+            $('#doing-items02').hide();
+            $('#doing-items01').css('animation-name', 'fadeOutDown');
           }, 500);
+          setTimeout(function () {
+            $('#doing-items01').hide();
+          }, 700);
 
           $('#WhatWeDo').removeClass('section02-show');
           console.log('section2 item hide');
