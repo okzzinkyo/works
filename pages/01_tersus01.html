@@ -30,7 +30,7 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-    <!-- https://www.soulmemoria.com/tf -tersus/themes/tersus11/index.html cover -->
+    <!-- https://www.soulmemoria.com/tf-tersus/themes/tersus11/index.html cover -->
   </head>
   <body>
     <div class="wrap">
@@ -195,10 +195,16 @@
         <!-- Section03 // Latest Works -->
         <div class="Works-wrap">
           <section id="Works" class="section">
-            <h2 class="fs-h2 ff-title text-teriary fw-regular">LATEST WORKS</h2>
+            <div class="Works-title">
+              <h2 class="fs-h2 ff-title text-teriary fw-regular">
+                LATEST WORKS
+              </h2>
+            </div>
             <div class="btn-gallery">
-              <button class="text-secondary btn-bg">GALLERY A</button>
-              <button>GALLERY B</button>
+              <button onclick="galleryA()" class="btn-A text-secondary">
+                GALLERY A
+              </button>
+              <button onclick="galleryB()" class="btn-B">GALLERY B</button>
             </div>
             <div class="gallery-wrap">
               <!-- gallery A -->
@@ -479,16 +485,19 @@
         $('.header-title').show();
         $('#header p').show();
         console.log('header text animation');
+
+        $('.gallery-B').hide();
+        function galleryA() {}
       });
 
       $(window).scroll(function () {
         // Section01(AboutUs) show & hide
-        var About_scrollTop = $(window).scrollTop();
+        var scrollTop = $(window).scrollTop();
         var About_position =
           $('.AboutUs-wrap').position().top - $(window).height() / 2;
 
         if (
-          About_scrollTop >= About_position &&
+          scrollTop >= About_position &&
           $('#AboutUs').hasClass('section01-show') == false
         ) {
           // show animation add
@@ -500,7 +509,7 @@
           $('#AboutUs').addClass('section01-show');
           console.log('Section01 title show');
         } else if (
-          About_scrollTop < About_position &&
+          scrollTop < About_position &&
           $('#AboutUs').hasClass('section01-show') == true
         ) {
           // hide animation add
@@ -512,12 +521,11 @@
         }
 
         // Section02(WhatWeDo) show & hide
-        var What_scrollTop = $(window).scrollTop();
         var What_position =
           $('.WhatWeDo-wrap').position().top - $(window).height() / 2;
 
         if (
-          What_scrollTop >= What_position &&
+          scrollTop >= What_position &&
           $('#WhatWeDo').hasClass('section02-show') == false
         ) {
           // show animation add
@@ -540,7 +548,7 @@
           $('#WhatWeDo').addClass('section02-show');
           console.log('section2 item show');
         } else if (
-          What_scrollTop < What_position &&
+          scrollTop < What_position &&
           $('#WhatWeDo').hasClass('section02-show') == true
         ) {
           // hide animation add
@@ -563,6 +571,31 @@
 
           $('#WhatWeDo').removeClass('section02-show');
           console.log('section2 item hide');
+        }
+
+        // Section03(Latest Works) show & hide
+        var Works_position =
+          $('.Works-wrap').position().top - $(window).height() / 2;
+        if (
+          scrollTop >= Works_position &&
+          $('#Works').hasClass('section03-show') == false
+        ) {
+          // show animation add
+          $('.Works-title h2').show();
+          $('.Works-title h2').css('animation-name', 'fadeInLeft');
+          console.log('section3 title show');
+
+          $('#Works').addClass('section03-show');
+        } else if (
+          scrollTop < Works_position &&
+          $('#Works').hasClass('section03-show') == true
+        ) {
+          $('.Works-title h2').css('animation-name', 'fadeOutLeft');
+          setTimeout(function () {
+            $('.Works-title h2').hide();
+          }, 300);
+
+          $('#Works').removeClass('section03-show');
         }
       });
 

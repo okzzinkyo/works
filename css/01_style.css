@@ -40,6 +40,16 @@ fieldset {
   margin: 0;
 }
 
+button:active,
+button:focus,
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* 공통 */
 .sr-only {
   position: absolute;
@@ -318,16 +328,8 @@ fieldset {
   transition: border-radius 0.4s ease-out;
 }
 
-.doing-item.flex {
-  display: flex;
-}
-
 .doing-item:hover {
   border-radius: 30px;
-}
-
-.doing-item:nth-of-type(3n) {
-  margin-right: 0;
 }
 
 .doing-item img {
@@ -350,15 +352,21 @@ fieldset {
 
 .Works-wrap {
   position: relative;
-  z-index: -30;
   width: 100%;
   height: 2621px;
   padding-top: 359px;
   background-color: #dedede;
 }
 
-#Works h2 {
+.Works-title {
+  height: 80px;
+  width: 1280px;
   margin-bottom: 100px;
+}
+
+.Works-title h2 {
+  display: none;
+  animation-duration: 1s;
 }
 
 .btn-gallery {
@@ -375,8 +383,30 @@ fieldset {
   border: 1px solid #191919;
 }
 
-.btn-bg {
+.btn-A {
   background-color: #191919;
+}
+.btn-B {
+  background-color: transparent;
+}
+
+.btn-B:hover {
+  background-color: #4c4c4c;
+  border: 1px #4c4c4c solid;
+  color: #d2d2d2;
+}
+
+.btn-B.clicked {
+  background-color: #191919;
+}
+
+.btn-A.clicked {
+  background-color: transparent;
+}
+.btn-A.clicked:hover {
+  background-color: #4c4c4c;
+  border: 1px #4c4c4c solid;
+  color: #d2d2d2;
 }
 
 .btn-gallery button:first-child {
@@ -388,9 +418,8 @@ fieldset {
   width: 2480px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
-  z-index: -30;
+  z-index: 30;
 }
 
 .gallery {
