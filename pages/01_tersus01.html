@@ -366,11 +366,13 @@
         <!--  blockquote -->
         <div class="blockquote-wrap">
           <blockquote class="blockquote text-white">
-            <p class="fs-Xlarge fw-light">
-              YOU HAVE TO LEARN THE RULES OF THE GAME. AND THEN YOU HAVE TO PLAY
-              BETTER THAN ANYONE ELSE.
-            </p>
-            <p class="fs-medium fw-regular">Albert Einstein</p>
+            <div class="wise-saying">
+              <p class="fw-light">
+                YOU HAVE TO LEARN THE RULES OF THE GAME. AND THEN YOU HAVE TO
+                PLAY BETTER THAN ANYONE ELSE.
+              </p>
+            </div>
+            <p class="author fs-medium fw-regular">Albert Einstein</p>
           </blockquote>
         </div>
 
@@ -637,7 +639,7 @@
           $('#Works').removeClass('section03-show');
         }
 
-        // Section04(Latest Works) show & hide
+        // Section04(Meet The Team) show & hide
         var Team_position =
           $('.Team-wrap').position().top - $(window).height() / 2;
         if (
@@ -651,16 +653,16 @@
           // member img show
           setTimeout(function () {
             $('.member-img:eq(0) img').show().css('animation-name', 'ImgShow');
-          }, 1000);
+          }, 800);
           setTimeout(function () {
             $('.member-img:eq(1) img').show().css('animation-name', 'ImgShow');
-          }, 1300);
+          }, 1000);
           setTimeout(function () {
             $('.member-img:eq(2) img').show().css('animation-name', 'ImgShow');
-          }, 1500);
+          }, 1200);
           setTimeout(function () {
             $('.member-img:eq(3) img').show().css('animation-name', 'ImgShow');
-          }, 1700);
+          }, 1400);
 
           $('#Team').addClass('section04-show');
         } else if (
@@ -680,6 +682,47 @@
           }, 500);
 
           $('#Team').removeClass('section04-show');
+        }
+
+        // Blockquote
+        var blockquote_position =
+          $('.blockquote-wrap').position().top - $(window).height() / 2;
+        if (
+          scrollTop >= blockquote_position &&
+          $('.blockquote').hasClass('blockquote-show') == false
+        ) {
+          // title show animation add
+          $('.blockquote').addClass('flex');
+          $('.blockquote').show();
+          $('.blockquote').css('animation-name', 'fadeInUp');
+
+          setTimeout(function () {
+            $('.wise-saying').show();
+            $('.author').show();
+            $('.author').css('animation-name', 'fadeInUp');
+          }, 500);
+          setTimeout(function () {
+            $('.wise-saying').css('transform', 'scale(1)');
+          }, 600);
+
+          $('.blockquote').addClass('blockquote-show');
+        } else if (
+          scrollTop < blockquote_position &&
+          $('.blockquote').hasClass('blockquote-show') == true
+        ) {
+          // title hide animation add
+          $('.blockquote').css('animation-name', 'fadeOutDown');
+          setTimeout(function () {
+            $('.blockquote').removeClass('flex');
+            $('.wise-saying').css('transform', 'scale(0.3333333)');
+            $('.author').css('animation-name', 'fadeOutDown');
+          }, 300);
+          setTimeout(function () {
+            $('.wise-saying').hide();
+            $('.author').hide();
+          }, 600);
+
+          $('.blockquote').removeClass('blockquote-show');
         }
       });
 
