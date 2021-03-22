@@ -321,34 +321,42 @@
             </div>
             <div class="fs-base member">
               <div class="member-info">
-                <img
-                  src="../assets/01_tersus01/team-img01.jpg"
-                  alt="profile01"
-                />
+                <div class="member-img">
+                  <img
+                    src="../assets/01_tersus01/team-img01.jpg"
+                    alt="profile01"
+                  />
+                </div>
                 <p class="fw-semibold member-name">LUKE THACKERY</p>
                 <p class="ff-desciption">Founder & CEO</p>
               </div>
               <div class="member-info">
-                <img
-                  src="../assets/01_tersus01/team-img02.jpg"
-                  alt="profile02"
-                />
+                <div class="member-img">
+                  <img
+                    src="../assets/01_tersus01/team-img02.jpg"
+                    alt="profile02"
+                  />
+                </div>
                 <p class="fw-semibold member-name">KRISTINA CLAIRE</p>
                 <p class="ff-desciption">Sales Manager</p>
               </div>
               <div class="member-info">
-                <img
-                  src="../assets/01_tersus01/team-img03.jpg"
-                  alt="profile03"
-                />
+                <div class="member-img">
+                  <img
+                    src="../assets/01_tersus01/team-img03.jpg"
+                    alt="profile03"
+                  />
+                </div>
                 <p class="fw-semibold member-name">SELMA BLAKE</p>
                 <p class="ff-desciption">Creative Head</p>
               </div>
               <div class="member-info">
-                <img
-                  src="../assets/01_tersus01/team-img04.jpg"
-                  alt="profile04"
-                />
+                <div class="member-img">
+                  <img
+                    src="../assets/01_tersus01/team-img04.jpg"
+                    alt="profile04"
+                  />
+                </div>
                 <p class="fw-semibold member-name">JAKE DILLINGER</p>
                 <p class="ff-desciption">Marketing Head</p>
               </div>
@@ -620,12 +628,58 @@
           scrollTop < Works_position &&
           $('#Works').hasClass('section03-show') == true
         ) {
+          // hide animation add
           $('.Works-title h2').css('animation-name', 'fadeOutLeft');
           setTimeout(function () {
             $('.Works-title h2').hide();
-          }, 300);
+          }, 500);
 
           $('#Works').removeClass('section03-show');
+        }
+
+        // Section04(Latest Works) show & hide
+        var Team_position =
+          $('.Team-wrap').position().top - $(window).height() / 2;
+        if (
+          scrollTop >= Team_position &&
+          $('#Team').hasClass('section04-show') == false
+        ) {
+          // title show animation add
+          $('.Team-title h2').show();
+          $('.Team-title h2').css('animation-name', 'fadeInLeft');
+
+          // member img show
+          setTimeout(function () {
+            $('.member-img:eq(0) img').show().css('animation-name', 'ImgShow');
+          }, 1000);
+          setTimeout(function () {
+            $('.member-img:eq(1) img').show().css('animation-name', 'ImgShow');
+          }, 1300);
+          setTimeout(function () {
+            $('.member-img:eq(2) img').show().css('animation-name', 'ImgShow');
+          }, 1500);
+          setTimeout(function () {
+            $('.member-img:eq(3) img').show().css('animation-name', 'ImgShow');
+          }, 1700);
+
+          $('#Team').addClass('section04-show');
+        } else if (
+          scrollTop < Team_position &&
+          $('#Team').hasClass('section04-show') == true
+        ) {
+          // title hide animation add
+          $('.Team-title h2').css('animation-name', 'fadeOutLeft');
+          setTimeout(function () {
+            $('.Team-title h2').hide();
+          }, 500);
+
+          // member img hide
+          $('.member-img img').css('animation-name', 'ImgHide');
+          setTimeout(function () {
+            $('.member-img img').hide();
+          }, 500);
+
+          $('#Team').removeClass('section04-show');
         }
       });
 
