@@ -113,9 +113,11 @@
         <!-- Section02 // What We Do -->
         <div class="WhatWeDo-wrap">
           <section id="WhatWeDo" class="section text-white">
-            <h2 class="fs-h2 fw-regular ff-title animate__animated">
-              WHAT WE DO
-            </h2>
+            <div class="WhatWeDo-title">
+              <h2 class="fs-h2 fw-regular ff-title animate__animated">
+                WHAT WE DO
+              </h2>
+            </div>
             <div class="doing-items-wrap">
               <div id="doing-items01">
                 <div class="doing-item">
@@ -314,7 +316,9 @@
         <!-- Section04 // Meet The Team -->
         <div class="Team-wrap">
           <section id="Team" class="section text-white">
-            <h2 class="ff-title fs-h2">MEET THE TEAM</h2>
+            <div class="Team-title">
+              <h2 class="ff-title fs-h2">MEET THE TEAM</h2>
+            </div>
             <div class="fs-base member">
               <div class="member-info">
                 <img
@@ -555,8 +559,8 @@
           $('#WhatWeDo').hasClass('section02-show') == false
         ) {
           // show animation add
-          $('#WhatWeDo h2').show();
-          $('#WhatWeDo h2').css('animation-name', 'fadeInLeft');
+          $('.WhatWeDo-title h2').show();
+          $('.WhatWeDo-title h2').css('animation-name', 'fadeInLeft');
           console.log('section2 title show');
 
           // item show animation add
@@ -578,7 +582,7 @@
           $('#WhatWeDo').hasClass('section02-show') == true
         ) {
           // hide animation add
-          $('#WhatWeDo h2').css('animation-name', 'fadeOutLeft');
+          $('.WhatWeDo-title h2').css('animation-name', 'fadeOutLeft');
           console.log('section2 title hide');
 
           // item hide animation add

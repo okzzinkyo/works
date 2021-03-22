@@ -278,12 +278,15 @@ textarea:focus {
   background-size: cover;
 }
 
-#WhatWeDo h2 {
-  display: none;
+.WhatWeDo-title {
   margin: 0 auto;
-  width: 1280px;
+  width: 792px;
   height: 80px;
   margin-bottom: 60px;
+}
+
+.WhatWeDo-title h2 {
+  display: none;
 }
 
 .doing-items-wrap {
@@ -360,7 +363,8 @@ textarea:focus {
 
 .Works-title {
   height: 80px;
-  width: 1280px;
+  width: 793px;
+  margin: 0 auto;
   margin-bottom: 100px;
 }
 
@@ -487,7 +491,14 @@ textarea:focus {
   line-height: 2;
 }
 
+.Team-title {
+  height: 80px;
+  width: 825px;
+  margin: 0 auto;
+}
+
 #Team h2 {
+  display: none;
   margin-bottom: 30px;
 }
 
