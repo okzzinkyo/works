@@ -38,6 +38,9 @@ fieldset {
   border-style: none;
   padding: 0;
   margin: 0;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 button:active,
@@ -435,13 +438,18 @@ textarea:focus {
 }
 
 .gallery {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   letter-spacing: 0px;
   width: 1200px;
   transition: transform 1000ms ease-in;
+  animation-duration: 1s;
+}
+
+.gallery.flex {
+  display: flex;
 }
 
 .gallery-A {

@@ -623,6 +623,8 @@
           // show animation add
           $('.Works-title h2').show();
           $('.Works-title h2').css('animation-name', 'fadeInLeft');
+          $('.gallery').addClass('flex');
+          $('.gallery').css('animation-name', 'fadeInUp');
           console.log('section3 title show');
 
           $('#Works').addClass('section03-show');
@@ -632,8 +634,10 @@
         ) {
           // hide animation add
           $('.Works-title h2').css('animation-name', 'fadeOutLeft');
+          $('.gallery').css('animation-name', 'fadeOutDown');
           setTimeout(function () {
             $('.Works-title h2').hide();
+            $('.gallery').removeClass('flex');
           }, 500);
 
           $('#Works').removeClass('section03-show');
