@@ -452,9 +452,15 @@
         <div class="Contact-wrap">
           <section id="Contact" class="section">
             <div class="agency-info-wrap">
-              <h2 class="fs-h2 fw-regular text-contact ff-title">CONTACT US</h2>
+              <div class="Contact-title">
+                <h2 class="fs-h2 fw-regular text-contact ff-title">
+                  CONTACT US
+                </h2>
+              </div>
               <address class="agency-info fs-base text-primary ff-desciption">
-                <p class="agency fs-small fw-bold">Ockzzin Design Agency</p>
+                <div>
+                  <p class="agency fs-small fw-bold">Ockzzin Design Agency</p>
+                </div>
                 <div class="agency-contact">
                   <p class="agency-adress">
                     203, Suyeonggangbyeon-daero, <br />
@@ -462,9 +468,7 @@
                     Republic of Korea
                   </p>
                   <p class="agency-call">
-                    <a href="tel:+821234567">Tel : +82-010-123-4567</a>
-                  </p>
-                  <p>
+                    <a href="tel:+821234567">Tel : +82-010-123-4567</a><br />
                     <a href="mailto:dhrwlsrud94@naver.com"
                       >Email : info@Ockzzin.com</a
                     >
@@ -811,6 +815,39 @@
           }, 600);
 
           $('.blockquote').removeClass('blockquote-show');
+        }
+
+        // Section05(Contact Us) show & hide
+        var Contact_position =
+          $('.Contact-wrap').position().top - $(window).height() / 2;
+        if (
+          scrollTop >= Contact_position &&
+          $('#Contact').hasClass('section05-show') == false
+        ) {
+          // title show animation add
+          $('.Contact-title h2').show();
+          $('.Contact-title h2').css('animation-name', 'fadeInLeft');
+          $('.agency-adres').show();
+          $('.agency-call').show();
+          $('.agency-adres').css('animation-name', 'fadeInUp');
+          $('.agency-call').css('animation-name', 'fadeInUp');
+
+          setTimeout(function () {
+            // $('.agency').show();
+          }, 500);
+
+          $('#Contact').addClass('section05-show');
+        } else if (
+          scrollTop < blockquote_position &&
+          $('#Contact').hasClass('section05-show') == true
+        ) {
+          // title hide animation add
+          $('.Contact-title h2').css('animation-name', 'fadeOutRight');
+          setTimeout(function () {
+            $('.Contact-title h2').hide();
+          }, 300);
+
+          $('#Contact').removeClass('section05-show');
         }
       });
 

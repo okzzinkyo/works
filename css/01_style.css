@@ -644,6 +644,7 @@ textarea:focus {
   display: none;
   animation-duration: 1s;
 }
+
 /* Section05 // Contact Us */
 .Contact-wrap {
   width: 100%;
@@ -666,9 +667,11 @@ textarea:focus {
   height: 538px;
 }
 
-.agency-info-wrap h2 {
+.Contact-title h2 {
+  display: none;
   text-align: left;
   margin-bottom: 200px;
+  animation-duration: 1s;
 }
 
 .agency-info {
@@ -677,7 +680,18 @@ textarea:focus {
   letter-spacing: normal;
 }
 .agency {
+  display: none;
   margin-right: 30px;
+}
+
+.agency-adress {
+  display: none;
+  animation-duration: 1s;
+}
+
+.agency-call {
+  display: none;
+  animation-duration: 1s;
 }
 
 .agency-adress {
