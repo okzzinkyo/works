@@ -448,11 +448,12 @@ textarea:focus {
   animation-duration: 1s;
 }
 
-.gallery.flex {
+.gallery-A.flex {
   display: flex;
 }
 
 .gallery-A {
+  display: none;
   margin-left: 40px;
 }
 
@@ -518,17 +519,23 @@ textarea:focus {
   text-align: center;
 }
 
-.member-img {
-  position: relative;
+.member-img-wrap {
   width: 280px;
   height: 369px;
   margin: 15px;
 }
+
+.member-img {
+  display: none;
+  position: relative;
+  width: 280px;
+  height: 369px;
+  animation-duration: 1s;
+}
+
 .member-img img {
   width: 100%;
   height: 100%;
-  animation-duration: 1s;
-  display: none;
 }
 
 .member-intro-wrap {
