@@ -510,24 +510,36 @@
 
       // btn - A
       function galleryA() {
-        $('.btn-A').removeClass('clicked');
-        $('.btn-B').removeClass('clicked');
-        $('.gallery-A > .project-item').show();
-        $('.gallery').css('transform', 'translateX(0)');
-        setTimeout(function () {
-          $('.gallery-B').hide();
-        }, 1000);
+        if ($('.gallery-A').hasClass('galleryA-show') == false) {
+          $('.btn-A').removeClass('clicked');
+          $('.btn-B').removeClass('clicked');
+          $('.gallery-A > .project-item').show();
+          $('.gallery').css('transform', 'translateX(0)');
+          setTimeout(function () {
+            $('.gallery-B').hide();
+          }, 1000);
+          $('.gallery-A').addClass('galleryA-show');
+          $('.gallery-B').removeClass('galleryB-show');
+          console.log('galleryA-show');
+        }
       }
       // btn - B
       function galleryB() {
-        $('.btn-A').addClass('clicked');
-        $('.btn-B').addClass('clicked');
-        $('.gallery-B').show();
-        $('.gallery').css('transform', 'translateX(-1200px)');
-        setTimeout(function () {
-          $('.gallery-A > .project-item').hide();
-        }, 1000);
+        if ($('.gallery-B').hasClass('galleryB-show') == false) {
+          $('.btn-A').addClass('clicked');
+          $('.btn-B').addClass('clicked');
+          $('.gallery-B').show();
+          $('.gallery').css('transform', 'translateX(-1200px)');
+          setTimeout(function () {
+            $('.gallery-A > .project-item').hide();
+          }, 1000);
+          $('.gallery-B').addClass('galleryB-show');
+          $('.gallery-A').removeClass('galleryA-show');
+          console.log('galleryB-show');
+        }
       }
+
+      // Section04(Meet The Team)
 
       // scroll event에 적용된 jquery
       $(window).scroll(function () {
@@ -623,8 +635,8 @@
           // show animation add
           $('.Works-title h2').show();
           $('.Works-title h2').css('animation-name', 'fadeInLeft');
-          $('.gallery').addClass('flex');
-          $('.gallery').css('animation-name', 'fadeInUp');
+          // $('.gallery').addClass('flex');
+          // $('.gallery').css('animation-name', 'fadeInUp');
           console.log('section3 title show');
 
           $('#Works').addClass('section03-show');
@@ -634,10 +646,10 @@
         ) {
           // hide animation add
           $('.Works-title h2').css('animation-name', 'fadeOutLeft');
-          $('.gallery').css('animation-name', 'fadeOutDown');
+          // $('.gallery').css('animation-name', 'fadeOutDown');
           setTimeout(function () {
             $('.Works-title h2').hide();
-            $('.gallery').removeClass('flex');
+            // $('.gallery').removeClass('flex');
           }, 500);
 
           $('#Works').removeClass('section03-show');
