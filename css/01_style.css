@@ -515,7 +515,6 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   line-height: 2;
 }
 
@@ -574,6 +573,7 @@ textarea:focus {
 
 .member-img:hover .member-intro-wrap {
   display: flex;
+  animation: Member_intro 0.5s ease-in;
 }
 
 .member-intro {
@@ -1028,6 +1028,17 @@ textarea:focus {
     opacity: 0;
   }
 }
+/* project img link */
+@keyframes project_img {
+  0% {
+    border-radius: 50px;
+    background-position: bottom;
+  }
+  100% {
+    border-radius: 0;
+    background-position: center;
+  }
+}
 
 /* Member img show hide animation*/
 @keyframes ImgShow {
@@ -1048,13 +1059,13 @@ textarea:focus {
   }
 }
 
-@keyframes project_img {
-  0% {
-    border-radius: 50px;
-    background-position: bottom;
+@keyframes Member_intro {
+  from {
+    background-color: transparent;
+    opacity: 0;
   }
-  100% {
-    border-radius: 0;
-    background-position: center;
+  to {
+    background-color: #000000;
+    opacity: 0.7;
   }
 }
