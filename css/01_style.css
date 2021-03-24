@@ -573,7 +573,7 @@ textarea:focus {
 
 .member-img:hover .member-intro-wrap {
   display: flex;
-  animation: Member_intro 0.5s ease-in;
+  animation: Member_intro 0.3s ease-in;
 }
 
 .member-intro {
