@@ -34,18 +34,6 @@
   </head>
   <body>
     <div class="wrap">
-      <!-- <div class="box">
-        <div class="scroll-box">
-          <div id="box01"></div>
-          <div id="box02"></div>
-          <div id="box03"></div>
-          <div id="box04"></div>
-          <div id="box05"></div>
-          <div id="box06"></div>
-          <div id="box07"></div>
-          <div id="box08"></div>
-        </div>
-      </div> -->
       <!----------------- Header ----------------->
       <div class="header-wrap">
         <!-- header // background -->
@@ -458,8 +446,8 @@
                 </h2>
               </div>
               <address class="agency-info fs-base text-primary ff-desciption">
-                <div>
-                  <p class="agency fs-small fw-bold">Ockzzin Design Agency</p>
+                <div class="agency-name">
+                  <p class="fs-small fw-bold">Ockzzin Design Agency</p>
                 </div>
                 <div class="agency-contact">
                   <p class="agency-adress">
@@ -635,7 +623,7 @@
           $('#AboutUs p').css('animation-name', ' fadeInRight');
 
           $('#AboutUs').addClass('section01-show');
-          console.log('Section01 title show');
+          console.log('Section01 show');
         } else if (
           scrollTop < About_position &&
           $('#AboutUs').hasClass('section01-show') == true
@@ -645,7 +633,7 @@
           $('#AboutUs p').css('animation-name', 'fadeOutRight');
 
           $('#AboutUs').removeClass('section01-show');
-          console.log('Section01 title hide');
+          console.log('Section01 hide');
         }
 
         // Section02(WhatWeDo) show & hide
@@ -659,7 +647,6 @@
           // show animation add
           $('.WhatWeDo-title h2').show();
           $('.WhatWeDo-title h2').css('animation-name', 'fadeInLeft');
-          console.log('section2 title show');
 
           // item show animation add
           $('#doing-items01').show();
@@ -674,14 +661,13 @@
           }, 500);
 
           $('#WhatWeDo').addClass('section02-show');
-          console.log('section2 item show');
+          console.log('section02 show');
         } else if (
           scrollTop < What_position &&
           $('#WhatWeDo').hasClass('section02-show') == true
         ) {
           // hide animation add
           $('.WhatWeDo-title h2').css('animation-name', 'fadeOutLeft');
-          console.log('section2 title hide');
 
           // item hide animation add
           $('#doing-items03').css('animation-name', 'fadeOutDown');
@@ -698,7 +684,7 @@
           }, 700);
 
           $('#WhatWeDo').removeClass('section02-show');
-          console.log('section2 item hide');
+          console.log('section02 hide');
         }
 
         // Section03(Latest Works) show & hide
@@ -711,9 +697,11 @@
           // show animation add
           $('.Works-title h2').show();
           $('.Works-title h2').css('animation-name', 'fadeInLeft');
+
+          // gallery show
           $('.gallery-A').addClass('flex');
           $('.gallery-A').css('animation-name', 'fadeInUp');
-          console.log('section3 title show');
+          console.log('section03 show');
 
           $('#Works').addClass('section03-show');
         } else if (
@@ -727,6 +715,7 @@
             $('.Works-title h2').hide();
             $('.gallery-A').removeClass('flex');
           }, 500);
+          console.log('section03 hide');
 
           $('#Works').removeClass('section03-show');
         }
@@ -755,6 +744,7 @@
           setTimeout(function () {
             $('.member-img:eq(3)').show().css('animation-name', 'ImgShow');
           }, 1400);
+          console.log('section04 show');
 
           $('#Team').addClass('section04-show');
         } else if (
@@ -772,6 +762,7 @@
           setTimeout(function () {
             $('.member-img').hide();
           }, 500);
+          console.log('section04 hide');
 
           $('#Team').removeClass('section04-show');
         }
@@ -783,7 +774,7 @@
           scrollTop >= blockquote_position &&
           $('.blockquote').hasClass('blockquote-show') == false
         ) {
-          // title show animation add
+          //show animation add
           $('.blockquote').addClass('flex');
           $('.blockquote').show();
           $('.blockquote').css('animation-name', 'fadeInUp');
@@ -796,13 +787,14 @@
           setTimeout(function () {
             $('.wise-saying').css('transform', 'scale(1)');
           }, 600);
+          console.log('blockquote show');
 
           $('.blockquote').addClass('blockquote-show');
         } else if (
           scrollTop < blockquote_position &&
           $('.blockquote').hasClass('blockquote-show') == true
         ) {
-          // title hide animation add
+          //hide animation add
           $('.blockquote').css('animation-name', 'fadeOutDown');
           setTimeout(function () {
             $('.blockquote').removeClass('flex');
@@ -813,6 +805,7 @@
             $('.wise-saying').hide();
             $('.author').hide();
           }, 600);
+          console.log('blockquote hide');
 
           $('.blockquote').removeClass('blockquote-show');
         }
@@ -824,36 +817,45 @@
           scrollTop >= Contact_position &&
           $('#Contact').hasClass('section05-show') == false
         ) {
-          // title show animation add
+          //show animation add
           $('.Contact-title h2').show();
           $('.Contact-title h2').css('animation-name', 'fadeInLeft');
-          $('.agency-adres').show();
+          $('.agency-adress').show();
+          $('.agency-adress').css('animation-name', 'fadeInUp');
           $('.agency-call').show();
-          $('.agency-adres').css('animation-name', 'fadeInUp');
           $('.agency-call').css('animation-name', 'fadeInUp');
+          $('#user-info').show();
+          $('#user-info').css('animation-name', 'fadeInRight');
 
           setTimeout(function () {
-            // $('.agency').show();
+            $('.agency-name p').show();
+            $('.agency-name p').css('animation-name', 'fadeInLeft');
           }, 500);
+          console.log('section5 show');
 
           $('#Contact').addClass('section05-show');
         } else if (
-          scrollTop < blockquote_position &&
+          scrollTop < Contact_position &&
           $('#Contact').hasClass('section05-show') == true
         ) {
-          // title hide animation add
-          $('.Contact-title h2').css('animation-name', 'fadeOutRight');
+          // hide animation add
+          $('.Contact-title h2').css('animation-name', 'fadeOutLeft');
+          $('.agency-name p').css('animation-name', 'fadeOutLeft');
+          $('.agency-adress').css('animation-name', 'fadeOutLeft');
+          $('.agency-call').css('animation-name', 'fadeOutDown');
+          $('#user-info').css('animation-name', 'fadeOutRight');
           setTimeout(function () {
             $('.Contact-title h2').hide();
+            $('.agency-name p').hide();
+            $('.agency-adress').hide();
+            $('.agency-call').hide();
+            $('#user-info').hide();
           }, 300);
+          console.log('section5 hide');
 
           $('#Contact').removeClass('section05-show');
         }
       });
-
-      // $(window).scroll(function () {
-      //   $("#box3").animate({ scrollTo("+2011px", "-2980px") });
-      // });
 
       // submit 유효성 체크!!
       var is_name = 0;

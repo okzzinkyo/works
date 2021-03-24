@@ -679,9 +679,15 @@ textarea:focus {
   display: flex;
   letter-spacing: normal;
 }
-.agency {
+
+.agency-name {
+  width: 200px;
+}
+
+.agency-name p {
   display: none;
   margin-right: 30px;
+  animation-duration: 1s;
 }
 
 .agency-adress {
@@ -696,6 +702,11 @@ textarea:focus {
 
 .agency-adress {
   margin-bottom: 40px;
+}
+
+#user-info {
+  display: none;
+  animation-duration: 1s;
 }
 
 #user-info fieldset {
@@ -993,25 +1004,5 @@ textarea:focus {
   }
   to {
     opacity: 0;
-  }
-}
-
-/* blockquote p font size animation*/
-
-@keyframes fontsizeUp {
-  from {
-    font-size: 13px;
-  }
-  to {
-    font-size: 30px;
-  }
-}
-
-@keyframes fontsizeDown {
-  from {
-    font-size: 30px;
-  }
-  to {
-    font-size: 13px;
   }
 }
