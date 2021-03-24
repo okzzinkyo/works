@@ -128,27 +128,6 @@ textarea:focus {
     url(../assets/01_tersus01/blank.gif);
 }
 
-/* header - bg animation  */
-@keyframes bg-slide {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  5% {
-    animation-timing-function: ease-out;
-    opacity: 0.7;
-  }
-  30% {
-    opacity: 0.7;
-  }
-  35% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 /* header */
 #header {
   display: flex;
@@ -469,10 +448,50 @@ textarea:focus {
   margin-right: 15px;
 }
 
-.project-item img {
+.project-img {
+  position: relative;
   width: 390px;
   height: 260px;
   margin-bottom: 15px;
+  background-color: black;
+  overflow: hidden;
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in, opacity 1s ease-in;
+}
+
+.project-img:hover img {
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+.project-img:hover .project-img-link {
+  display: flex;
+  animation: project_img 0.3s ease-in;
+}
+
+.project-img-link {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  margin: 30px;
+  border: #ffffff 1px solid;
+  background: transparent
+    url(../assets/01_tersus01/icn-expand_poster_u92208.png) no-repeat center
+    center;
+  background-size: 30px 30px;
+}
+
+.project-img-link a {
+  width: 100%;
+  height: 100%;
 }
 
 .project-item h3 {
@@ -919,6 +938,28 @@ textarea:focus {
 }
 
 /* Animation 정의 */
+
+/* header - bg animation  */
+@keyframes bg-slide {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  5% {
+    animation-timing-function: ease-out;
+    opacity: 0.7;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* fade In */
 @keyframes fadeInRight {
   from {
@@ -1004,5 +1045,16 @@ textarea:focus {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes project_img {
+  0% {
+    border-radius: 50px;
+    background-position: bottom;
+  }
+  100% {
+    border-radius: 0;
+    background-position: center;
   }
 }
