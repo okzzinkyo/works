@@ -1,64 +1,67 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
+
 .machine-wrap {
   display: flex;
-}
-.machine {
-  background-color: #1e95cf;
+  margin: 0 auto;
 }
 
 .machine-front {
-  width: 560px;
+  width: 580px;
   height: 640px;
+  background-color: #1e95cf;
+  border-right: 3px #000000 solid;
+  padding: 10px;
 }
 
 .machine-side {
-  width: 100px;
-  height: 640px;
-}
-
-.floor-left {
-  width: 50px;
-  margin-right: 2px;
-  background-color: #cfd4f1;
-  padding-left: 10px;
-}
-
-.floor-front {
-  width: 448px;
-  background-color: #cfd4f1;
-}
-
-.floor-left2 {
-  width: 50px;
-  margin-right: 2px;
-  background-color: #cfd4f1;
-  padding-left: 10px;
-}
-
-.floor-front2 {
-  width: 248px;
-  background-color: #cfd4f1;
+  width: 3px;
+  border-left: 100px solid #1e95cf;
+  border-top: 15px transparent outset;
+  border-bottom: 5px transparent outset;
 }
 
 .floor {
   display: flex;
   position: relative;
-  height: 90px;
-  /* padding-left: 10px; */
   margin: 10px;
 }
 
 .floor-4th {
-  display: flex;
   width: 500px;
+}
+
+.floor-3rd,
+.floor-2nd {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.floor-left {
+  width: 50px;
+  height: 90px;
+  margin-right: 2px;
+  background-color: #cfd4f1;
+}
+
+.floor-front {
+  height: 90px;
+  background-color: #cfd4f1;
+}
+
+.floor4Front {
+  width: 448px;
+}
+
+.floorFront {
+  width: 248px;
 }
 
 #part2 {
   display: flex;
+  justify-content: space-between;
 }
 
 .floor-3rd {
@@ -72,9 +75,21 @@
   width: 300px;
 }
 
-.part2-right {
+.part2-coin {
+  position: relative;
   width: 220px;
   border: #000000 3px solid;
+  margin-right: 10px;
+}
+
+.putcoin {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 80px;
+  border: #dfbf1c 5px solid;
+  background-color: #000000;
 }
 
 .item-wrap {
@@ -82,6 +97,14 @@
   position: absolute;
   bottom: 0;
   left: 25px;
+}
+.item-wrap .apple:last-child {
+  transform: rotateZ(35deg);
+  transform: rotateY(180deg);
+}
+
+.item {
+  margin-right: 20px;
 }
 
 .item img {
@@ -91,4 +114,10 @@
 color
 #1e95cf
 #cfd4f1
+#dfbf1c
+#e9cf47
+#302d38
+#000000
+#dc445d
+
  */
