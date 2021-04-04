@@ -640,6 +640,8 @@
       }
 
       // Scroll event에 적용된 jquery
+      // https://stackoverflow.com/questions/10573021/jquery-scroll-with-timeout
+      // 위 사이트처럼 clearTimeout 적용해줄것!!!
       $(window).scroll(function () {
         // Section01(AboutUs) show & hide
         var scrollTop = $(window).scrollTop();
