@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>02_vending-machine</title>
     <link rel="stylesheet" href="../css/02_style.css" />
+    <script src="../js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <div class="machine-wrap">
@@ -85,9 +88,23 @@
             <div class="putcoin"></div>
           </div>
         </div>
-        <div class="part3"></div>
+        <div class="part3"><div class="itemExit"></div></div>
       </div>
       <div class="machine machine-side"></div>
+      <div class="ock-coin">
+        <img src="../assets/02_vending-machine/ock-coin.png" alt="" />
+      </div>
     </div>
+    <script>
+      // // 마우스 따라다니게
+      //   var width = $(".ock-coin").width();
+      //   var height = $(".ock-coin").height();
+      //   $(document).mousemove(function (e) {
+      //     $(".ock-coin").css("top", e.pageY - width / 2);
+      //     $(".ock-coin").css("left", e.pageX - height / 2);
+      //   });
+
+      $(".ock-coin").draggable();
+    </script>
   </body>
 </html>

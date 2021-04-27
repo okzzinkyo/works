@@ -6,6 +6,7 @@
 .machine-wrap {
   display: flex;
   margin: 0 auto;
+  position: relative;
 }
 
 .machine-front {
@@ -18,6 +19,7 @@
 
 .machine-side {
   width: 3px;
+  height: 640px;
   border-left: 100px solid #1e95cf;
   border-top: 15px transparent outset;
   border-bottom: 5px transparent outset;
@@ -62,6 +64,7 @@
 #part2 {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .floor-3rd {
@@ -110,6 +113,28 @@
 .item img {
   height: 100%;
 }
+
+.part3 {
+  width: 100%;
+}
+
+.itemExit {
+  width: 380px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.ock-coin {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-image: url(../assets/02_vending-machine/ock-coin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* 
 color
 #1e95cf
