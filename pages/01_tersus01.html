@@ -46,13 +46,18 @@
         <!-- header // title, nav -->
         <header id="header">
           <h1
-            class="header-title text-white fs-h1 ff-title fw-regular animate__animated animate__fadeInDownBig"
+            class="
+              header-title
+              text-white
+              fs-h1
+              ff-title
+              fw-regular
+              animate__fadeInDownBig
+            "
           >
             THIS IS TERSUS
           </h1>
-          <p
-            class="text-white fs-medium fw-light animate__animated animate__fadeInUp"
-          >
+          <p class="text-white fs-medium fw-light animate__fadeInUp">
             A MUSE PARALLAX WEBSITE THEME
           </p>
           <nav id="nav">
@@ -72,9 +77,7 @@
               <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
-          <button
-            class="start-btn text-white fs-base animate__animated animate__fadeInUp"
-          >
+          <button class="start-btn text-white fs-base animate__fadeInUp">
             GET STARTED
           </button>
           <div class="nav-bg nav-stop"></div>
@@ -85,10 +88,8 @@
         <!-- Section01 // Who We Are -->
         <div class="AboutUs-wrap">
           <section id="AboutUs" class="section text-white">
-            <h2 class="text-white fs-h1 fw-regular ff-title animate__animated">
-              WHO WE ARE
-            </h2>
-            <p class="fs-large fw-regular ff-desciption animate__animated">
+            <h2 class="text-white fs-h1 fw-regular ff-title">WHO WE ARE</h2>
+            <p class="fs-large fw-regular ff-desciption">
               Aenean velit ante, rutrum ac nisl vitae, pretium viverra justo.
               Donec vel quam felis. Mauris egestas mi vel nibh congue, vitae
               porta purus volutpat. Suspendisse malesuada posuere urna quis
@@ -102,9 +103,7 @@
         <div class="WhatWeDo-wrap">
           <section id="WhatWeDo" class="section text-white">
             <div class="WhatWeDo-title">
-              <h2 class="fs-h2 fw-regular ff-title animate__animated">
-                WHAT WE DO
-              </h2>
+              <h2 class="fs-h2 fw-regular ff-title">WHAT WE DO</h2>
             </div>
             <div class="doing-items-wrap">
               <div id="doing-items01">
@@ -270,7 +269,13 @@
 
                 <!-- gallery B -->
                 <div
-                  class="gallery gallery-B fs-base text-primary ff-desciption fw-semibold"
+                  class="
+                    gallery gallery-B
+                    fs-base
+                    text-primary
+                    ff-desciption
+                    fw-semibold
+                  "
                 >
                   <div class="project-item">
                     <div class="project-img">
@@ -585,6 +590,7 @@
     </div>
     <script>
       $(window).ready(function () {
+        $(".start-btn").css("display", "flex");
         // nav background 적용
         if ($(window).scrollTop() != 0) {
           $(".nav-bg").show();
@@ -668,6 +674,11 @@
           $("#AboutUs h2").css("animation-name", "fadeOutLeft");
           $("#AboutUs p").css("animation-name", "fadeOutRight");
 
+          setTimeout(function () {
+            $("#AboutUs h2").hide();
+            $("#AboutUs p").hide();
+          }, 300);
+
           $("#AboutUs").removeClass("section01-show");
           console.log("Section01 hide");
         }
@@ -708,6 +719,7 @@
           // item hide animation add
           $("#doing-items03").css("animation-name", "fadeOutDown");
           setTimeout(function () {
+            $(".WhatWeDo-title h2").hide();
             $("#doing-items03").hide();
             $("#doing-items02").css("animation-name", "fadeOutDown");
           }, 300);
@@ -985,7 +997,8 @@
       }
 
       function isEmail(EMAILvalue) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var regex =
+          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(EMAILvalue);
       }
     </script>
